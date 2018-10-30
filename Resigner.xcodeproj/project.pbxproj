@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E537A6F2188360300CA0946 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E537A6E2188360300CA0946 /* AppDelegate.swift */; };
+		1E537A712188360300CA0946 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E537A702188360300CA0946 /* ViewController.swift */; };
+		1E537A732188360300CA0946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E537A722188360300CA0946 /* Assets.xcassets */; };
+		1E537A762188360300CA0946 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E537A742188360300CA0946 /* Main.storyboard */; };
+		1E537A802188421F00CA0946 /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E537A7F2188421F00CA0946 /* Files.swift */; };
+		1E537A8621884B4B00CA0946 /* CreateGameInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E537A8421884B4A00CA0946 /* CreateGameInfo.m */; };
+		1E537A88218863EE00CA0946 /* ShellOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E537A87218863EE00CA0946 /* ShellOut.swift */; };
+		5FF62237D83450572B1C4B83 /* Pods_Resigner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22129ADE90FD4AA3916CDAB /* Pods_Resigner.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0D1D7D93ADE4C500E91C2B28 /* Pods-Resigner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resigner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Resigner/Pods-Resigner.debug.xcconfig"; sourceTree = "<group>"; };
+		1E537A6B2188360300CA0946 /* Resigner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Resigner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E537A6E2188360300CA0946 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1E537A702188360300CA0946 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1E537A722188360300CA0946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1E537A752188360300CA0946 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1E537A772188360300CA0946 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E537A782188360300CA0946 /* Resigner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Resigner.entitlements; sourceTree = "<group>"; };
+		1E537A7F2188421F00CA0946 /* Files.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
+		1E537A8321884B4A00CA0946 /* Resigner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Resigner-Bridging-Header.h"; sourceTree = "<group>"; };
+		1E537A8421884B4A00CA0946 /* CreateGameInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateGameInfo.m; sourceTree = "<group>"; };
+		1E537A8521884B4B00CA0946 /* CreateGameInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateGameInfo.h; sourceTree = "<group>"; };
+		1E537A87218863EE00CA0946 /* ShellOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShellOut.swift; sourceTree = "<group>"; };
+		B22129ADE90FD4AA3916CDAB /* Pods_Resigner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Resigner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C239BD2C2C21B4D88DE05833 /* Pods-Resigner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resigner.release.xcconfig"; path = "Pods/Target Support Files/Pods-Resigner/Pods-Resigner.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E537A682188360300CA0946 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FF62237D83450572B1C4B83 /* Pods_Resigner.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E537A622188360300CA0946 = {
+			isa = PBXGroup;
+			children = (
+				1E537A6D2188360300CA0946 /* Resigner */,
+				1E537A6C2188360300CA0946 /* Products */,
+				3BE41F0B19A1124601EC121C /* Pods */,
+				1ED9D0B23B34F2A01F4A8B7C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1E537A6C2188360300CA0946 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E537A6B2188360300CA0946 /* Resigner.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E537A6D2188360300CA0946 /* Resigner */ = {
+			isa = PBXGroup;
+			children = (
+				1E537A812188490900CA0946 /* CreateGameInfo */,
+				1E537A7E2188420300CA0946 /* Helper */,
+				1E537A6E2188360300CA0946 /* AppDelegate.swift */,
+				1E537A702188360300CA0946 /* ViewController.swift */,
+				1E537A722188360300CA0946 /* Assets.xcassets */,
+				1E537A742188360300CA0946 /* Main.storyboard */,
+				1E537A772188360300CA0946 /* Info.plist */,
+				1E537A782188360300CA0946 /* Resigner.entitlements */,
+			);
+			path = Resigner;
+			sourceTree = "<group>";
+		};
+		1E537A7E2188420300CA0946 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				1E537A87218863EE00CA0946 /* ShellOut.swift */,
+				1E537A7F2188421F00CA0946 /* Files.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		1E537A812188490900CA0946 /* CreateGameInfo */ = {
+			isa = PBXGroup;
+			children = (
+				1E537A8521884B4B00CA0946 /* CreateGameInfo.h */,
+				1E537A8421884B4A00CA0946 /* CreateGameInfo.m */,
+				1E537A8321884B4A00CA0946 /* Resigner-Bridging-Header.h */,
+			);
+			path = CreateGameInfo;
+			sourceTree = "<group>";
+		};
+		1ED9D0B23B34F2A01F4A8B7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B22129ADE90FD4AA3916CDAB /* Pods_Resigner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3BE41F0B19A1124601EC121C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0D1D7D93ADE4C500E91C2B28 /* Pods-Resigner.debug.xcconfig */,
+				C239BD2C2C21B4D88DE05833 /* Pods-Resigner.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1E537A6A2188360300CA0946 /* Resigner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E537A7B2188360300CA0946 /* Build configuration list for PBXNativeTarget "Resigner" */;
+			buildPhases = (
+				DF80D7207C5B5098A63565E1 /* [CP] Check Pods Manifest.lock */,
+				1E537A672188360300CA0946 /* Sources */,
+				1E537A682188360300CA0946 /* Frameworks */,
+				1E537A692188360300CA0946 /* Resources */,
+				9CD603A8FF4734466E295FFA /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Resigner;
+			productName = Resigner;
+			productReference = 1E537A6B2188360300CA0946 /* Resigner.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1E537A632188360300CA0946 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = kubrcik;
+				TargetAttributes = {
+					1E537A6A2188360300CA0946 = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 1E537A662188360300CA0946 /* Build configuration list for PBXProject "Resigner" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1E537A622188360300CA0946;
+			productRefGroup = 1E537A6C2188360300CA0946 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1E537A6A2188360300CA0946 /* Resigner */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E537A692188360300CA0946 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E537A732188360300CA0946 /* Assets.xcassets in Resources */,
+				1E537A762188360300CA0946 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9CD603A8FF4734466E295FFA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Resigner/Pods-Resigner-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Resigner/Pods-Resigner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF80D7207C5B5098A63565E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Resigner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E537A672188360300CA0946 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E537A88218863EE00CA0946 /* ShellOut.swift in Sources */,
+				1E537A712188360300CA0946 /* ViewController.swift in Sources */,
+				1E537A8621884B4B00CA0946 /* CreateGameInfo.m in Sources */,
+				1E537A6F2188360300CA0946 /* AppDelegate.swift in Sources */,
+				1E537A802188421F00CA0946 /* Files.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1E537A742188360300CA0946 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E537A752188360300CA0946 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1E537A792188360300CA0946 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1E537A7A2188360300CA0946 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		1E537A7C2188360300CA0946 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D1D7D93ADE4C500E91C2B28 /* Pods-Resigner.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 234U2QHE6X;
+				INFOPLIST_FILE = Resigner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kubrick.Resigner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Resigner/CreateGameInfo/Resigner-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		1E537A7D2188360300CA0946 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C239BD2C2C21B4D88DE05833 /* Pods-Resigner.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 234U2QHE6X;
+				INFOPLIST_FILE = Resigner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kubrick.Resigner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Resigner/CreateGameInfo/Resigner-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E537A662188360300CA0946 /* Build configuration list for PBXProject "Resigner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E537A792188360300CA0946 /* Debug */,
+				1E537A7A2188360300CA0946 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E537A7B2188360300CA0946 /* Build configuration list for PBXNativeTarget "Resigner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E537A7C2188360300CA0946 /* Debug */,
+				1E537A7D2188360300CA0946 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1E537A632188360300CA0946 /* Project object */;
+}
