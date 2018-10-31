@@ -14,6 +14,7 @@
 		1E537A802188421F00CA0946 /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E537A7F2188421F00CA0946 /* Files.swift */; };
 		1E537A8621884B4B00CA0946 /* CreateGameInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E537A8421884B4A00CA0946 /* CreateGameInfo.m */; };
 		1E537A88218863EE00CA0946 /* ShellOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E537A87218863EE00CA0946 /* ShellOut.swift */; };
+		1E537A8A21899DCC00CA0946 /* ConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E537A8921899DCC00CA0946 /* ConsoleViewController.swift */; };
 		5FF62237D83450572B1C4B83 /* Pods_Resigner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22129ADE90FD4AA3916CDAB /* Pods_Resigner.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		1E537A8421884B4A00CA0946 /* CreateGameInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateGameInfo.m; sourceTree = "<group>"; };
 		1E537A8521884B4B00CA0946 /* CreateGameInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateGameInfo.h; sourceTree = "<group>"; };
 		1E537A87218863EE00CA0946 /* ShellOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShellOut.swift; sourceTree = "<group>"; };
+		1E537A8921899DCC00CA0946 /* ConsoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleViewController.swift; sourceTree = "<group>"; };
 		B22129ADE90FD4AA3916CDAB /* Pods_Resigner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Resigner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C239BD2C2C21B4D88DE05833 /* Pods-Resigner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resigner.release.xcconfig"; path = "Pods/Target Support Files/Pods-Resigner/Pods-Resigner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +74,7 @@
 				1E537A7E2188420300CA0946 /* Helper */,
 				1E537A6E2188360300CA0946 /* AppDelegate.swift */,
 				1E537A702188360300CA0946 /* ViewController.swift */,
+				1E537A8921899DCC00CA0946 /* ConsoleViewController.swift */,
 				1E537A722188360300CA0946 /* Assets.xcassets */,
 				1E537A742188360300CA0946 /* Main.storyboard */,
 				1E537A772188360300CA0946 /* Info.plist */,
@@ -234,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E537A8A21899DCC00CA0946 /* ConsoleViewController.swift in Sources */,
 				1E537A88218863EE00CA0946 /* ShellOut.swift in Sources */,
 				1E537A712188360300CA0946 /* ViewController.swift in Sources */,
 				1E537A8621884B4B00CA0946 /* CreateGameInfo.m in Sources */,
