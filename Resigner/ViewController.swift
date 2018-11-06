@@ -17,7 +17,6 @@ class ViewController: NSViewController {
     private var isReplaceInfo = true
     private var isReplaceSdk = true
     private var consoleVc: ConsoleViewController?
-    private var consoleText = ""
     
     private var keyToDelete = ["jodogameid","jodocpid","jodochannelid","jodoLcClientKey","jodoLcAppId","jodoAppID","gamigameid","gamicpid","gamichannelid","gamiLcClientKey","gamiLcAppId","gamiAppID"]
     private var imageExtension = ["jpg","jpeg","png"]
@@ -86,7 +85,7 @@ class ViewController: NSViewController {
             return
         }
         
-        if mainFolder != nil {
+        if mainFloderField.stringValue != "" {
             ipaFile = mainFolder?.fileWithExtension("ipa")
             cerFile = mainFolder?.fileWithExtension("p12")
             provisionFile = mainFolder?.fileWithExtension("mobileprovision")
@@ -115,10 +114,16 @@ class ViewController: NSViewController {
             return
         }
         
+//        presentViewControllerAsModalWindow(consoleVc!)
+        
+        // consoleVc?.appendText("开始重打包... \n")
+        
+        
         //unzip ipa
         var ipaFolder = try? Folder(path: (ipaFile!.parent?.path)! + (ipaFile?.nameExcludingExtension)!)
         if ipaFolder == nil {
             ipaFolder = try! ipaFile!.parent?.createSubfolderIfNeeded(withName: (ipaFile?.nameExcludingExtension)!)
+            // consoleVc?.appendText("ipa解压中... \n")
             SSZipArchive.unzipFile(atPath: ipaFile!.path, toDestination: (ipaFolder?.path)!)
         }
         guard let folder = try? ipaFolder?.subfolder(named: "Payload").folderWithExtension("app"),
@@ -131,30 +136,37 @@ class ViewController: NSViewController {
         try? appFolder.rename(to: appFolder.name.replacingOccurrences(of: " ", with: ""))
         
         if imageFolder != nil {
+            // consoleVc?.appendText("替换图片中... \n")
             replaceImage(imageFolder: imageFolder!, appFolder: appFolder)
         }
         
         if isReplaceSdk {
+            // consoleVc?.appendText("替换SDK... \n")
             if !replaceSdk(frameworkFolder: framewokFile!, bundleFolder: bundleFile!, appFolder: appFolder) {
                 return
             }
+            // consoleVc?.appendText("替换SDK: \(framewokFile!.name), 替换Bundle: \(bundleFile!.name) 完成 \n")
         }
         
         if isReplaceInfo {
+            // consoleVc?.appendText("替换info及加密文件... \n")
             if !replaceInfoPlist(plistFile: plistFile!, appFolder: appFolder) {
                 return
             }
         }
         
         if isResign {
+            // consoleVc?.appendText("重签名中... \n")
             if !resignApp(cerFile: cerFile!, provisionFile: provisionFile!, appFolder: appFolder, ipaFolder: ipaFolder!) {
                 return
             }
         }
         
         try? appFolder.rename(to: oldName)
-        let msg =  generateNewIpa(ipaFolder: ipaFolder!) ? "重打包完成:) \n \(consoleText)" : "重打包失败！"
+        // consoleVc?.appendText("正在生成游戏ipa... \n")
+        let msg =  generateNewIpa(ipaFolder: ipaFolder!) ? "重打包完成:) \n" : "重打包失败！\n"
         showAlert(text: msg, style: .informational)
+        // consoleVc?.appendText("\(msg) \n")
     }
     
     override func viewDidLoad() {
@@ -183,7 +195,7 @@ class ViewController: NSViewController {
             replacedFile.append(image.name)
         }
         if !replacedFile.isEmpty {
-            consoleText.append("替换图片：\(replacedFile) \n")
+            // consoleVc?.appendText("成功替换以下图片文件: \n \(replacedFile) \n")
         }
     }
     
@@ -220,8 +232,9 @@ class ViewController: NSViewController {
         
         let data = try? JSONSerialization.data(withJSONObject: gameInfo, options: .prettyPrinted)
         let json = String.init(data: data!, encoding: .utf8)
-        consoleText.append("强制审核时间：\(reviewDate.stringValue) \n")
-        consoleText.append("加密文件内容：\(json as AnyObject) \n")
+        
+        // consoleVc?.appendText("强制审核时间：\(reviewDate.stringValue) \n")
+        // consoleVc?.appendText("加密文件内容：\(json as AnyObject) \n")
         
         //generate and replace encrypted file
         guard let date = dateFormatter.date(from: reviewDate.stringValue) else {
@@ -288,8 +301,12 @@ class ViewController: NSViewController {
         let appPath = appFolder.path
         let frameworksPath = appFolder.path + "Frameworks"
 
+        // consoleVc?.appendText("替换mobileprovision... \n")
+        
         _ = try? shellOut(to: "cp \(provisionFile.path) \(appPath)/embedded.mobileprovision")
         
+        // consoleVc?.appendText("生成entitlements... \n")
+
         _ = try? shellOut(to: "security cms -D -i \(appPath)/embedded.mobileprovision > \(ipaFolderPath)/t_entitlements_full.plist")
         _ = try? shellOut(to: "/usr/libexec/PlistBuddy -x -c \"Print:Entitlements\" \(ipaFolderPath)/t_entitlements_full.plist > \(ipaFolder.path)/entitlements.plist")
         try? ipaFolder.file(named: "t_entitlements_full.plist").delete()
@@ -301,13 +318,20 @@ class ViewController: NSViewController {
             pattern = "iPhone\\sDeveloper\\:[A-Za-z1-9\\s\\(]*\\)"
             devId = regexGetFirstMatch(in: output!, with: pattern)
         }
+        
+        // consoleVc?.appendText("重签名frameworks... \n")
+        
         let signFrameworkOutput = try? shellOut(to: "codesign -f -s \"\(devId!)\" \(ipaFolderPath)/entitlements.plist \(frameworksPath)/*")
+
+        // consoleVc?.appendText("重签名App... \n")
+
         let signAppOutput = try? shellOut(to: "codesign -f -s \"\(devId!)\" --entitlements \(ipaFolderPath)/entitlements.plist \(appPath)")
         
         if signFrameworkOutput == nil || signAppOutput == nil {
             showAlert(text: "签名出错，请检查该签名证书是否已导入到本机")
             return false
         }
+        try? ipaFolder.file(named: "entitlements.plist").delete()
         return true
     }
     
@@ -331,8 +355,9 @@ class ViewController: NSViewController {
         let outputFolder = try? ipaFolder.parent!.createSubfolderIfNeeded(withName: "导出包")
         let outputName = (outputFolder?.path)! + ipaDateFormatter.string(from: Date()) + ".ipa"
         
-        let zipOutput = try? shellOut(to: "zip -r \(outputName) \(payloadFolder!.path) \(swiftSupportFolder?.path ?? "")")
-        return zipOutput == nil ? false : true
+        
+        let zipResult = SSZipArchive.createZipFile(atPath: outputName, withContentsOfDirectory: ipaFolder.path, keepParentDirectory: false)
+        return zipResult
     }
     
     

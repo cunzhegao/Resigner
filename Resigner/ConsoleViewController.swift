@@ -14,11 +14,11 @@ class ConsoleViewController: NSViewController {
     
     override func viewDidLoad() {
         consoleTextView.backgroundColor = NSColor.black
-        consoleTextView.textColor = NSColor.white
     }
     
     func appendText(_ text: String) {
-        let attrString = NSAttributedString(string: text)
+        let attrString = NSAttributedString(string: text, attributes: [NSAttributedStringKey.foregroundColor: NSColor.white,
+                                                                       NSAttributedStringKey.font: NSFont.systemFont(ofSize: 20) ])
         consoleTextView.textStorage?.append(attrString)
         consoleTextView.scrollRangeToVisible(NSMakeRange(consoleTextView.string.count, 0))
     }
